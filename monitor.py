@@ -41,7 +41,7 @@ def matches_target(text: str) -> bool:
     return all(phrase in text for phrase in TARGET_PHRASES)
 
 
-@client.on(events.NewMessage(incoming=True))
+@client.on(events.NewMessage())
 async def handler(event):
     text = event.message.message or ""
     if not matches_target(text):
