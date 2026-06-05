@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 API_ID           = int(os.environ["TG_API_ID"])
 API_HASH         = os.environ["TG_API_HASH"]
 N8N_WEBHOOK_URL  = os.environ["N8N_WEBHOOK_URL"]
-FACILITY_BOT_ID  = int(os.environ.get("FACILITY_BOT_ID", "0"))  # 0 = sin filtro de remitente
+FACILITY_BOT_ID  = int(os.environ.get("FACILITY_BOT_ID") or "0")  # 0 = sin filtro de remitente
 
 TARGET_PHRASES = [
     "Alguien se ha desapuntado",
